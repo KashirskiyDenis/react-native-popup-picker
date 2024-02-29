@@ -1,5 +1,5 @@
 <h1 align="center">
-  ⭐ React Native Dropdown Select List </h1>
+  ⭐ React Native Pop-up Select List </h1>
 
 <div align="center">
 
