@@ -3,7 +3,7 @@
 
 <div align="center">
 
-React Native Pop-up select list
+React Native Pop-up select
 
 </div>
 
@@ -18,8 +18,8 @@ React Native Pop-up select list
 
 <br>
 
-|  iOS  | Android | Web  | Expo |
---------|---------|-----|------|
-|  ✅  |    ✅    |  ✅  |  ✅  |
+|  iOS  | Android | Expo |
+--------|---------|------|
+|  ✅  |    ✅    |  ✅  |
 
 For Live Demo [Expo Snack](https://snack.expo.dev/@dkashirskiy/react-native-popup-select)

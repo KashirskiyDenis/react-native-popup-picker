@@ -1,10 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { StyleSheet, View, SafeAreaView } from 'react-native';
 import Popup from './components/Popup';
 
 const App = () => {
-  const [modalVisible, setModalVisible] = useState(false);
-
   const [selected, setSelected] = useState();
   const data = [
     { label: 'Zero', value: '0' },
@@ -18,10 +16,6 @@ const App = () => {
     { label: 'Eight', value: '8' },
     { label: 'Nine', value: '9' },
   ];
-
-  useEffect(() => {
-    console.log(selected);
-  }, [selected]);
 
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -44,7 +38,6 @@ const styles = StyleSheet.create({
   container: {
     height: '100%',
     padding: 5,
-    backgroundColor: '#b2fff6',
   },
   dropdown: {
     fontSize: 20,
