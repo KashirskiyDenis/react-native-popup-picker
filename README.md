@@ -18,6 +18,6 @@ React Native Pop-up select list
 
 <br>
 
-|  iOS  | Android | Web | Expo |
---------|---------|-----|------|
-|  ✅  |    ✅    | ✅ |  ✅  |
+|  iOS  | Android | Expo |
+--------|---------|------|
+|  ✅  |    ✅    |  ✅  |
