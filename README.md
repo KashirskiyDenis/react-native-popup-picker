@@ -21,3 +21,5 @@ React Native Pop-up select list
 |  iOS  | Android | Expo |
 --------|---------|------|
 |  ✅  |    ✅    |  ✅  |
+
+For Live Demo [Expo Snack](https://snack.expo.dev/@dkashirskiy/react-native-popup-select)
