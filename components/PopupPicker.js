@@ -5,17 +5,27 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
+  TouchableWithoutFeedback,
   View,
 } from 'react-native';
 import { Entypo } from '@expo/vector-icons';
 
-function PopupPicker({ label = 'Select item', data, select, onSelect, style }) {
-  let [bigList, setBigList] = useState(false);
+function PopupPicker({
+  label = 'Select item',
+  data,
+  select,
+  onSelect,
+  fontSize = 18,
+  borderColor = '#007aff',
+  borderRadius = 7,
+  borderWidth = 1,
+}) {
   let [visible, setVisible] = useState(false);
-  let [selected, setSelected] = useState(select?.label ? select.label : undefined);
+  let [selected, setSelected] = useState(
+    select?.label ? select.label : undefined
+  );
 
   useEffect(() => {
-    if (data.length > 4) setBigList(true);
     if (select) onSelect(select.value);
   }, []);
 
@@ -40,7 +50,9 @@ function PopupPicker({ label = 'Select item', data, select, onSelect, style }) {
           onPress={() => {
             onItemPress(item);
           }}>
-          <Text style={[styles.item, style]}>{item.label}</Text>
+          <Text style={[styles.item, { fontSize: fontSize }]}>
+            {item.label}
+          </Text>
         </TouchableOpacity>
       );
     });
@@ -48,12 +60,24 @@ function PopupPicker({ label = 'Select item', data, select, onSelect, style }) {
   let renderModal = () => {
     if (visible) {
       return (
-        <Modal visible={visible} transparent={true} animationType="fade">
-          <View style={styles.centeredView}>
-            <View style={[styles.modalView, bigList ? styles.modalViewBig : {}]}>
-              <ScrollView>{renderItem()}</ScrollView>
-            </View>
-          </View>
+        <Modal
+          visible={visible}
+          transparent={true}
+          animationType="fade"
+          onRequestClose={() => {
+            setVisible(false);
+          }}>
+          <TouchableOpacity
+            onPress={() => {
+              setVisible(false);
+            }}
+            style={styles.centeredView}>
+            <TouchableWithoutFeedback>
+              <View style={styles.modalView}>
+                <ScrollView>{renderItem()}</ScrollView>
+              </View>
+            </TouchableWithoutFeedback>
+          </TouchableOpacity>
         </Modal>
       );
     }
@@ -62,9 +86,26 @@ function PopupPicker({ label = 'Select item', data, select, onSelect, style }) {
   return (
     <TouchableOpacity onPress={toggleModal}>
       {renderModal()}
-      <View style={[styles.button, style]}>
-        <Text style={[styles.buttonText, style]}>{selected || label}</Text>
-        <Entypo name="chevron-small-down" style={[styles.buttonText, style]} />
+      <View
+        style={[
+          styles.button,
+          {
+            borderColor: borderColor,
+            borderRadius: borderRadius,
+            borderWidth: borderWidth,
+          },
+        ]}>
+        <Text
+          style={[
+            { fontSize: fontSize },
+            selected ? {} : styles.placeholderTextColor,
+          ]}>
+          {selected || label}
+        </Text>
+        <Entypo
+          name="chevron-small-down"
+          style={{ color: borderColor, fontSize: fontSize }}
+        />
       </View>
     </TouchableOpacity>
   );
@@ -81,24 +122,22 @@ let styles = StyleSheet.create({
     backgroundColor: '#ffffff',
     padding: 10,
     borderRadius: 7,
-    width: '50%',
+    width: '80%',
+    maxHeight: 255,
   },
-  modalViewBig: {
-    height: 220,
-  },  
   button: {
     flexDirection: 'row',
     flexWrap: 'wrap',
+    alignItems: 'center',
     justifyContent: 'space-between',
     backgroundColor: '#ffffff',
     padding: 5,
-    paddingLeft: 10,
-    marginVertical: 5,
-    borderWidth: 1,
-    borderRadius: 10,
   },
   item: {
-    paddingVertical: 7,
+    paddingVertical: 5,
+  },
+  placeholderTextColor: {
+    color: '#c0c0c0',
   },
 });
 
