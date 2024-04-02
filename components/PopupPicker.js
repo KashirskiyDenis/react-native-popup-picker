@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { Entypo } from '@expo/vector-icons';
 
-function Popup({ label = 'Select item', data, select, onSelect, style }) {
+function PopupPicker({ label = 'Select item', data, select, onSelect, style }) {
   let [bigList, setBigList] = useState(false);
   let [visible, setVisible] = useState(false);
   let [selected, setSelected] = useState(select?.label ? select.label : undefined);
@@ -102,4 +102,4 @@ let styles = StyleSheet.create({
   },
 });
 
-export default Popup;
+export default PopupPicker;
