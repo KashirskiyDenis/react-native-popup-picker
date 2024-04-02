@@ -1,21 +1,43 @@
 {
-  "main": "node_modules/expo/AppEntry.js",
+  "name": "react-native-popup-select",
+  "version": "1.0.0",
+  "description": "React Native Pop-up Select List",
+  "main": "index.js",
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "expo": "~50.0.14",
-    "expo-status-bar": "~1.11.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KashirskiyDenis/react-native-popup-select.git"
+  },
+  "keywords": [
+    "picker",
+    "select",
+    "popup",
+    "android",
+    "ios",
+    "selectlist",
+    "list",
+    "popup-picker",
+    "react",
+    "react native",
+    "react-native",
+    "reactnative",
+    "selectlist",
+    "expo",
+    "menu",
+    "chooser"
+  ],
+  "devDependencies": {
     "react": "18.2.0",
     "react-native": "0.73.6",
     "@expo/vector-icons": "^14.0.0",
     "react-native-paper": "4.9.2"
   },
-  "devDependencies": {
-    "@babel/core": "^7.20.0"
+  "author": "Denis Kashirskiy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KashirskiyDenis/react-native-popup-select/issues"
   },
-  "private": true
+  "homepage": "https://github.com/KashirskiyDenis/react-native-popup-select#readme"
 }
