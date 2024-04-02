@@ -10,7 +10,7 @@ React Native Pop-up select
 <h4>Light weight and <b>Easy</b> to use pop-up select list.</h4>
 
 -   Style it your way with style props of every view.
--   Smooth performance on all platforms IOS, Android and Web.
+-   Smooth performance on all platforms IOS, Android.
 
 <br>
 
@@ -22,4 +22,4 @@ React Native Pop-up select
 --------|---------|------|
 |  ✅  |    ✅    |  ✅  |
 
-For Live Demo [Expo Snack](https://snack.expo.dev/@dkashirskiy/react-native-popup-select)
+For Live Demo [Expo Snack](https://snack.expo.dev/@dkashirskiy/react-native-popup-select?platform=ios)
