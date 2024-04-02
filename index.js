@@ -1,2 +1,2 @@
-import PopupPicker from './components/Popup';
+import PopupPicker from './components/PopupPicker';
 export { PopupPicker };
