@@ -3,14 +3,14 @@
 
 <div align="center">
 
-React Native Pop-up select
+React Native Pop-up Picker
 
 </div>
 
 <h4>Light weight and <b>Easy</b> to use pop-up select list.</h4>
 
 -   Style it your way with style props of every view.
--   Smooth performance on all platforms IOS, Android.
+-   Smooth performance on platforms IOS, Android.
 
 <br>
 
@@ -22,4 +22,4 @@ React Native Pop-up select
 --------|---------|------|
 |  ✅  |    ✅    |  ✅  |
 
-For Live Demo [Expo Snack](https://snack.expo.dev/@dkashirskiy/react-native-popup-select?platform=ios)
+For Live Demo [Expo Snack](https://snack.expo.dev/@dkashirskiy/react-native-popup-select)
